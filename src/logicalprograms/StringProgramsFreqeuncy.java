@@ -2,7 +2,7 @@ package logicalprograms;
 
 public class StringProgramsFreqeuncy {
 public static void main(String[] args) {
-	String name="manonmani";
+	String name="naveenchandar";
 	
 	int count=1;
 	String op="";
