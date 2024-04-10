@@ -14,7 +14,6 @@ import java.util.*;
         }
         
         int result = findSingle(a);
-        if(result==1)
         System.out.println("The unpaired element is: " + result);
         
         sc.close();
@@ -22,21 +21,19 @@ import java.util.*;
     
     static int findSingle(int a[]) {
         int result = 0,count=0;
-        String repeated="";
         for(int i=0;i< a.length;i++)
         {
-            if(!repeated.contains(String.valueOf(a[i])))
-            {
+            
                 for(int j=0;j<a.length;j++){
                     if(a[i]==a[j]){
-                        repeated+=a[j];
                         ++count;
                     }
 
                 }
-            }
+            
             if(count==1)
-                System.out.println(a[i]);
+                result=a[i];
+            System.out.println(result+" "+count+" "+a[i]);
             count=0;
         }   
         
