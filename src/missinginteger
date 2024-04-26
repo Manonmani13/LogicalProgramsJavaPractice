@@ -1,0 +1,108 @@
+   public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+        int n[]={2,3,4,5};
+       findInteger(n,n.length);
+    }
+    public static void findInteger(int n[],int length)
+    {
+        int temp[]=new int[length+1];
+        for(int i=0;i<=length;i++)
+        {
+            temp[i]=0;
+        }
+        for(int j=0;j<length;j++)
+        {
+            temp[n[j]-1]=1;
+        }
+        int d=0;
+        for(int i=0;i<=length;i++)
+        {
+            if(temp[i]==0)
+            d=i+1;
+        }
+        System.out.println(d);
+    }
+    
+    // Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+   public static void main(String[] args) {
+        int m=1,n=1;
+        System.out.println("Try programiz.pro");
+        for(int i=1;i<=11;i++)
+        {
+            for(int j=1;j<=m;j++)
+            {
+                System.out.print("*");
+            }
+           
+           for(int j=m;j<=10;j++)
+            {
+                System.out.print(" ");
+            }
+             for(int j=1;j<=m;j++)
+            {
+                System.out.print("*");
+            }
+           
+            
+            if(i<=5){
+                           m++;
+                n+=2; 
+            }
+            else
+            {
+                            m--;
+
+                 n+=2; 
+            }
+            System.out.println();
+        }
+}
+
+
+
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int n=(11*2)-1;
+        int star=0;
+        for(int j=0;j<=6*2-1;j++)
+        {
+            if(j<=11*2-1)
+            {
+                n=n-2;
+                star++;
+            }
+            else
+            
+            {
+                n=n+2;
+                star--;
+            }
+        
+        for(int i=1;i<=star;i++)
+        {
+            System.out.print("*");
+        }
+        for(int k=1;k<=n;k++)
+        {
+            System.out.print(" ");
+        }
+        for(int m=1;m<=star;m++)
+        {
+            if(m!=n)
+            System.out.print("*");
+        }
+        System.out.println();
+        }
+    }
+}
