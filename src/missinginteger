@@ -106,3 +106,65 @@ class HelloWorld {
         }
     }
 }
+
+//
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int n=23,d=0;
+      StringBuffer sb=new StringBuffer();
+      Map<Integer,String> ls=new HashMap<Integer,String>();
+      ls.put(1,"one");
+      ls.put(2,"Two");
+      ls.put(3,"Three");
+      ls.put(4,"Four");
+      ls.put(5,"Five");
+      ls.put(6,"Six");
+      ls.put(7,"Seven");
+      ls.put(8,"Eight");
+      ls.put(9,"Nine");
+
+      while(n!=0){
+        d=n%10;
+        sb.append(ls.get(d));
+        n=n/10;
+        
+      }
+     
+      System.out.println(sb);
+  }
+}
+
+import java.util.*;
+import java.util.regex.Pattern; 
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int n=23,d=0;
+      StringBuffer sb=new StringBuffer();
+      Map<Integer,String> ls=new HashMap<Integer,String>();
+      ls.put(1,"one");
+      ls.put(2,"Two");
+      ls.put(3,"Three");
+      ls.put(4,"Four");
+      ls.put(5,"Five");
+      ls.put(6,"Six");
+      ls.put(7,"Seven");
+      ls.put(8,"Eight");
+      ls.put(9,"Nine");
+
+      while(n!=0){
+        d=n%10;
+        sb.append(ls.get(d)+" ");
+        n=n/10;
+        
+      }
+              Pattern pattern = Pattern.compile("\\s"); 
+        String s[]=pattern.split(sb.toString());
+        for(int i=0;i<s.length;i++)
+      System.out.println(s[i]);
+  }
+}
