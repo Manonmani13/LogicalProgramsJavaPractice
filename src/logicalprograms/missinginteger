@@ -65,3 +65,74 @@ class HelloWorld {
 
 
 }
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int n=(11*2)-1;
+        int star=0;
+        for(int j=0;j<=6*2-1;j++)
+        {
+            if(j<=11*2-1)
+            {
+                n=n-2;
+                star++;
+            }
+            else
+            
+            {
+                n=n+2;
+                star--;
+            }
+        
+        for(int i=1;i<=star;i++)
+        {
+            System.out.print("*");
+        }
+        for(int k=1;k<=n;k++)
+        {
+            System.out.print(" ");
+        }
+        for(int m=1;m<=star;m++)
+        {
+            if(m!=n)
+            System.out.print("*");
+        }
+        System.out.println();
+        }
+    }
+}
+
+//
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int n=23,d=0;
+      StringBuffer sb=new StringBuffer();
+      Map<Integer,String> ls=new HashMap<Integer,String>();
+      ls.put(1,"one");
+      ls.put(2,"Two");
+      ls.put(3,"Three");
+      ls.put(4,"Four");
+      ls.put(5,"Five");
+      ls.put(6,"Six");
+      ls.put(7,"Seven");
+      ls.put(8,"Eight");
+      ls.put(9,"Nine");
+
+      while(n!=0){
+        d=n%10;
+        sb.append(ls.get(d));
+        n=n/10;
+        
+      }
+     
+      System.out.println(sb);
+  }
+}
