@@ -197,3 +197,37 @@ public class Main {
 
   }
 }
+//odd even ascending
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int nums[] ={1, 2, 3, 5, 4, 7, 10,11,12};
+      String oddno="",evenno="";
+      int d=0;
+      for(int i=0;i<nums.length;i++)
+      {
+       if(nums[i]%2!=0)
+       {
+        oddno+=nums[i];
+       }
+       else{
+          evenno+=nums[i];
+
+       }
+       
+      }
+      int n=Integer.parseInt(oddno);
+      while(n!=0)
+      {
+        d=n%10;
+        System.out.println(d);
+        n/=10;
+      }
+      System.out.println(evenno);
+
+
+  }
+}
