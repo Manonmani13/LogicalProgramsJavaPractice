@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      String first="naveenchandar",unique="";
+      int len=0;
+      for(int i=0;i<first.length();i++)
+      {
+        for(int j=0;j<first.length();j++)
+        {
+                if (first.charAt(i) == first.charAt(j)) {
+          
+            // System.out.println(first.charAt(i));
+            ++len;
+          }
+          
+        }
+        if(len==1)
+        {
+          System.out.println(first.charAt(i));
+          break;
+        }
+        len=0;
+      }
+      
+
+     
+  }
+}
