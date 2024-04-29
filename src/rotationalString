@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      String first="mano",second="mano";
+      String rotationString=String.valueOf(first.charAt(first.length()-1));
+      for(int i=0;i<first.length()-1;i++)
+      {
+        rotationString+=first.charAt(i);
+      }
+      String rotationString2=String.valueOf(second.charAt(second.length()-1));
+      for(int i=0;i<second.length()-1;i++)
+      {
+        rotationString2+=second.charAt(i);
+      }
+      if(first.length()==second.length()){
+         if(rotationString.equals(rotationString2))
+      {
+              System.out.println(rotationString+" is "+rotationString2 +"   rotate string");
+
+      }
+      else{
+                      System.out.println(rotationString+" is "+rotationString2 +" not  rotate string");
+
+      }
+      }
+      else{
+        System.out.println("length is not equal");
+      }
+     
+  }
+}
