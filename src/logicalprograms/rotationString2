@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     System.out.println("Hello, World!");
+      String first="naveenchandar",second="nchandarnaveee",rotationString="";
+      for(int i=0;i<first.length();i++)
+      {
+        rotationString=rotateString(i,first);
+        if(second.length()==rotationString.length() && second.equals(rotationString))
+        {
+          System.out.println("rotational String");
+        }
+        else{
+                    System.out.println("not rotational String");
+                    break;
+
+        }
+      }
+        
+        
+  }
+  public static String rotateString(int i,String input)
+  {
+    i=i%input.length();
+    return input.substring(i)+input.substring(0,i);
+  }
+}
