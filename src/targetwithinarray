@@ -1,0 +1,7 @@
+int n[]={1,3,4,5};
+        int target=5;
+        for(int i=0;i<n.length;i++)
+        {
+            if(target==n[i])
+                System.out.println(i);
+        }       
