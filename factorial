@@ -1,0 +1,17 @@
+factorial
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    long fact=factorial(5l);
+	System.out.println(fact);
+	}
+	public static long factorial(long i)
+	{
+	    if(i==1)
+	    return 1;
+	    else
+	    return (i*factorial(i-1));
+	}
+}
+
