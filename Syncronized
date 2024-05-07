@@ -1,0 +1,43 @@
+import java.util.*;
+
+ class Main1 {
+   public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      Sync m=new Sync();
+      Thread t=new Thread(new Team(m));
+      Thread t1=new Thread(new Team(m));
+      t.start();
+      t1.start();
+      try{
+        t.join();
+        t1.join();
+      }
+      catch(Exception e){}
+      System.out.println(m.cakeCount);
+
+  }
+  
+   
+}
+class Team implements Runnable
+{
+  Sync m;
+  Team(Sync m)
+  {
+    this.m=m;
+  }
+  public void run()
+  {
+    for(int i=1;i<=1000;i++)
+    {
+      m.increment();
+    }
+  }
+}
+public  class Sync{
+   int cakeCount=0;
+  public synchronized void increment()
+  {
+    cakeCount++;
+  }
+}
