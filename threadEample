@@ -64,3 +64,52 @@ class Number1 extends Thread{
     }
   }
 }
+
+//implementing runnable interface
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      Runnable b=new Book();
+      Number1 n=new Number1();
+// b.updateDB();
+Thread t=new Thread(b);
+  t.start();
+    n.start();
+    if(t.isAlive())
+    {
+      System.out.println("Still executing");
+    }
+    try{
+       t.join();
+    n.join();
+    }catch(Exception e){}
+   
+     if(t.isAlive())
+    {
+      System.out.println("Still executing");
+    }
+    System.out.println("Bye ....");
+  }
+}
+class Book implements Runnable{
+  public void run()
+  {
+    for(int i=1;i<=5;i++)
+    {
+      System.out.println("updating databases");
+      // try{Thread.sleep(8000);}catch(Exception e){}
+    }
+  }
+}
+class Number1 extends Thread{
+  public void run()
+  {
+     for(int i=1;i<=5;i++)
+    {
+      System.out.println(i);
+    }
+  }
+}
