@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int a=10;
+      increment(a);
+      System.out.println(a);
+      Rectangle r=new Rectangle();
+      r.length=10;
+      System.out.println(r.length+" "+r.breath);
+      changeLength(r);
+      System.out.println(r.length+" "+r.breath);
+      
+  }
+  static void increment(int a)
+  {
+    a++;
+  }
+  static void changeLength(Rectangle r)
+  {
+    r.length=20;
+    r.breath=30;
+  }
+}
+class Rectangle
+{
+  float length;
+  float breath;
+  
+}
+
