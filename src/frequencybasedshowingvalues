@@ -11,12 +11,21 @@ public class Main {
         {
           if(n[i]==n[j]){
             ++count;
-            s=s+n[i]+",";
+            s=s+n[i]+" ";
             System.out.println(n[i]+" "+count);
           }
           
+          
         }
         count=1;
+      }
+      for(int i=0;i<=n.length-1;i++)
+      {
+        if(count==1&& !s.contains(String.valueOf(n[i])))
+          {
+                        s=s+n[i]+" ";
+
+          }
       }
       
             System.out.println(s);
