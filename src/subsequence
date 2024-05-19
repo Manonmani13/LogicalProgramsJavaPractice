@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      String name="naveen",name2="naveenchandar";
+      System.out.println(isSubsequence(name, name2) ? 1 : 0);  // Output: 0
+
+      
+  }
+   public static boolean isSubsequence(String A, String B) {
+        int i = 0, j = 0;
+
+        while (i < A.length() && j < B.length()) {
+            if (A.charAt(i) == B.charAt(j)) {
+                i++;
+            }
+            j++;
+        }
+        
+        return i == A.length();
+    }
+}
